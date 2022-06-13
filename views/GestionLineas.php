@@ -42,7 +42,7 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="/index.html">Inicio</a>
+        <a class="navbar-brand" href="/consumos_fontic/">Inicio</a>
     </div>
 </nav>
 <!-- End Navigation-->
@@ -73,6 +73,7 @@
                     <select id="tipo_insercion" name="tipo_insercion" class="btn btn-warning">
                         <option value="0" selected>Agregar Lineas Nuevas &nbsp; &nbsp; &nbsp; &nbsp;</option>
                         <option value="1">Desactivar Lineas</option>
+                        <option value="2">Reactivar Lineas</option>
                     </select>
 
                     <br>
@@ -124,7 +125,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="../index/js/scripts.js"></script>
-<script src="../index/js/importacion_consumo.js"></script>
+<script src="../index/js/importacion_lineas.js"></script>
 <!-- // preloads -->
 <script>
     $(window).load(function () {
