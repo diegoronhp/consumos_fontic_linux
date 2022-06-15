@@ -1,6 +1,6 @@
 <?php
-//error_reporting(E_ALL);
-error_reporting(0);
+error_reporting(E_ALL);
+//error_reporting(0);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -29,18 +29,27 @@ function enviar_correo_usuario($respuesta){
                 'allow_self_signed' => true
             )
         );                                            // Activar envio SMTP
-        $mail->Host  = 'relaycorreo.registraduria.gov.co';                    // Servidor SMTP
+        //$mail->Host  = 'relaycorreo.registraduria.gov.co';                    // Servidor SMTP
+        $mail->Host  = 'smtp.gmail.com';                                // Servidor SMTP GMAIL
         $mail->SMTPAuth  = true;                                       // Identificacion SMTP
-        $mail->Username  = 'dmmancera@registraduria.gov.co';                  // Usuario SMTP
-        $mail->Password  = 'Changuas77';                  	          // Contraseña SMTP
+
+
+        //$mail->Username  = 'dmmancera@registraduria.gov.co';             // Usuario SMTP
+        $mail->Username  = 'tigofontic@gmail.com';                  // Usuario SMTP FONTIC
+        //$mail->Password  = 'Changuas66';                  	          // Contraseña SMTP
+        $mail->Password  = 'cwcoyawvhmbbkoyt';                  	      // Contraseña SMTP FONTIC
+
         //$mail->SMTPSecure = 'tls';
         $mail->Port  = 587;
-        $mail->setFrom('dmmancera@registraduria.gov.co', 'Fontic');                // Remitente del correo
+        //$mail->setFrom('dmmancera@registraduria.gov.co', 'Fontic');      // Remitente del correo
+        $mail->setFrom('tigofontic@gmail.com', 'Fontic');                // Remitente del correo FONTIC
 
         // Destinatarios
         $mail->addAddress('testcorreotigo@gmail.com', 'Fontic');  // Email y nombre del destinatario
         $mail->addAddress('testcorreotigo@hotmail.com', 'Fontic');
-        $mail->addAddress('mogomez@registraduria.gov.co', 'Fontic'); 
+        $mail->addAddress('mogomez@registraduria.gov.co', 'Fontic');
+        $mail->addAddress('dmmancera@registraduria.gov.co', 'Fontic');
+
 
         // Contenido del correo
         $mail->isHTML(true);
